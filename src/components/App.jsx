@@ -40,11 +40,11 @@ export class App extends React.Component {
         const totalPages = Math.ceil(totalHits / perPage);
 
         if (hits.length === 0) {
-          return Notiflix.Notify.error('Sorry, no images found. Please, try again!');
+          Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
         }
 
         if (page === totalPages) {
-          return Notiflix.Notify.info("You've reached the end of search results.");
+          Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
         }
 
         const data = hits.map(({ id, webformatURL, largeImageURL, tags }) => {

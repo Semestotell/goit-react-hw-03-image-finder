@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Spinner = styled.div`
-    margin: 32px auto;
+    margin: 150px auto;
     width: 80px;
     > svg {
         width: 80px;
